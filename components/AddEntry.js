@@ -29,7 +29,7 @@ export default class AddEntry extends Component {
     this.setState((curState) => {
       const count = curState[metric] + step;
       return {
-        ...state,
+        ...curState,
         [metric]: count > max ? max : count
       }
     })
@@ -41,7 +41,7 @@ export default class AddEntry extends Component {
     this.setState((curState) => {
       const count = curState[metric] - step;
       return {
-        ...state,
+        ...curState,
         [metric]: count < 0 ? 0 : count
       }
     })
