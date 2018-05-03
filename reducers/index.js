@@ -10,7 +10,7 @@ function entries (state = {}, action) {
     case ADD_ENTRY:
       return {
         ...state,
-        ...entry
+        ...action.entry
       }
     default:
       return state;
