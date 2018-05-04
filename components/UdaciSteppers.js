@@ -25,13 +25,13 @@ export default function UdaciSteppers({ max, unit, step, value, onIncrement, onD
             <TouchableOpacity onPress={onDecrement}
               style={[styles.androidBtn, {borderTopRightRadius: 0, borderBottomRightRadius: 0}]}>
               <FontAwesome name="minus"
-                size={30} color={purple}
+                size={30} color={white}
               />
             </TouchableOpacity>
             <TouchableOpacity onPress={onIncrement}
               style={[styles.androidBtn, {borderTopLeftRadius: 0, borderBottomLeftRadius: 0}]}>
               <FontAwesome name="plus"
-                size={30} color={purple}
+                size={30} color={white}
               />
             </TouchableOpacity>
           </View>
