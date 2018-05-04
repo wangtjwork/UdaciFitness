@@ -23,10 +23,16 @@ class History extends Component {
   render() {
     return (
       <View>
-        <Text>History</Text>
+        <Text>{JSON.stringify(this.props)}</Text>
       </View>
     )
   }
 }
 
-export default connect()(History)
+const mapStateToProps = (entries) => {
+  return {
+    entries
+  }
+}
+
+export default connect(mapStateToProps)(History)
