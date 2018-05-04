@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { receiveEntries, addEntry } from '../actions';
 import { timeToString, getDailyReminderValue } from '../utils/helpers';
 import { fetchCalendarResults } from '../utils/api';
+import UdaciFitnessCalendar from 'udacifitness-calendar'
 
 class History extends Component {
   componentDidMount() {
