@@ -3,7 +3,7 @@ import { View, Text, Slider } from 'react-native';
 
 export default function UdaciSlider({ max, unit ,step, value, onChange }) {
   return (
-    <View>
+    <View style={{flexDirection: 'row'}}>
       <Slider
         step={step}
         value={value}

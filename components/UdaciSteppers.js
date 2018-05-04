@@ -4,7 +4,7 @@ import { FontAwesome, Entypo } from '@expo/vector-icons';
 
 export default function UdaciSteppers({ max, unit, step, value, onIncrement, onDecrement }) {
   return (
-    <View>
+    <View style={{flexDirection: 'row'}}>
       <TouchableOpacity onPress={onDecrement}>
         <FontAwesome name="minus"
           size={30} color={'black'}

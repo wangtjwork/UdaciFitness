@@ -112,7 +112,7 @@ class AddEntry extends Component {
     }
 
     return (
-      <View>
+      <View style={{flex:1}}>
         <DateHeader date={(new Date()).toLocaleDateString()}/>
         <Text>{JSON.stringify(this.state)}</Text>
         {Object.keys(metaInfo).map((key) => {
@@ -120,7 +120,7 @@ class AddEntry extends Component {
           const value = this.state[key];
 
           return (
-            <View key={key}>
+            <View key={key} style={{flexDirection: 'row'}}>
               {getIcon()}
               {type === 'slider'
                 ? <UdaciSlider
