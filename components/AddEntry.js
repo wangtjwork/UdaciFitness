@@ -114,7 +114,7 @@ class AddEntry extends Component {
     }
 
     return (
-      <View style={{flex:1}}>
+      <View style={styles.container}>
         <DateHeader date={(new Date()).toLocaleDateString()}/>
         <Text>{JSON.stringify(this.state)}</Text>
         {Object.keys(metaInfo).map((key) => {
@@ -147,6 +147,11 @@ class AddEntry extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: white
+  },
   iosSubmitBtn: {
     backgroundColor: purple,
     padding: 10,
