@@ -11,7 +11,9 @@ export default class App extends React.Component {
     return (
       <Provider store={createStore(entries)}>
         <View style={{flex: 1}}>
-          <History />
+          <View style={{height: 20}}>
+            <History />
+          </View>
         </View>
       </Provider>
     );
