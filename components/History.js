@@ -19,14 +19,14 @@ class History extends Component {
           }))
         }
       })
+      .then(() => this.setState(() => ({ready: true})))
   }
 
   renderItem = ({ today, ...metrics }, formattedDate, key) => (
     <View>
-      {
-        today
-          ? <Text>JSON.stringify(today)</Text>
-          : <Text>JSON.stringify(metrics)</Text>
+      {today
+          ? <Text>{JSON.stringify(today)}</Text>
+          : <Text>{JSON.stringify(metrics)}</Text>
       }
     </View>
   )
