@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import { white } from '../utils/colors';
+import MetricCard from './MetricCard';
 
 class EntryDetail extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -17,17 +18,26 @@ class EntryDetail extends Component {
   }
 
   render() {
-    const metrics = { this.props }
+    const { metrics } = this.props;
 
     return (
-      <View>
+      <View style={styles.container}>
+        <MetricCard metrics={metrics} />
         <Text>Entry Detail - {this.props.navigation.state.params.entryId}</Text>
       </View>
     )
   }
 }
 
-function mapStateToProps(state, { navigation }) => {
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: white,
+    padding: 15
+  }
+})
+
+function mapStateToProps(state, { navigation }) {
   const { entryId } = navigation.state.params;
 
   return {
