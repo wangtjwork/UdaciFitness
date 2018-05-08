@@ -8,7 +8,7 @@ export default function MetricCard({ date, metrics }) {
   return (
     <View>
       { date && <DateHeader date={date}/> }
-      { Object.keys(metrics).map((metric) => ({
+      { Object.keys(metrics).map((metric) => {
         const { getIcon, displayName, unit, backgroundColor } = getMetricMetaInfo(metric);
 
         return (
@@ -24,7 +24,7 @@ export default function MetricCard({ date, metrics }) {
             </View>
           </View>
         )
-      })) }
+      }) }
     </View>
   )
 }
