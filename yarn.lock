@@ -5544,6 +5544,10 @@ react-native@~0.55.2:
     xmldoc "^0.4.0"
     yargs "^9.0.0"
 
+react-navigator@^0.0.0-0:
+  version "0.0.0-0"
+  resolved "https://registry.yarnpkg.com/react-navigator/-/react-navigator-0.0.0-0.tgz#8c8769665d734d7b8b9b4bd7e06c027d086566b2"
+
 react-proxy@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
