@@ -33,7 +33,19 @@ export default class Live extends Component {
   }
 
   askPermission = () => {
+    Permissions.askAsync(Permissions.LOCATION)
+      .then(({ status }) => {
+        if (status === 'granted') {
+          return this.setLocation();
+        }
 
+        this.setState({
+          status
+        })
+      })
+      .catch((error) => {
+        console.warn('Error getting Location permission: ', error);
+      })
   }
 
   setLocation = () => {
@@ -74,7 +86,7 @@ export default class Live extends Component {
     if (status === 'undetermined') {
       return (
         <View style={styles.center}>
-
+          <Foundation name="alert" size={50} />
           <Text>
             You need to enable location services for this app.
           </Text>
@@ -83,7 +95,6 @@ export default class Live extends Component {
               Enable
             </Text>
           </TouchableOpacity>
-
         </View>
       )
     }
