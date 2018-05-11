@@ -10,6 +10,10 @@ export default class Live extends Component {
     direction: ''
   }
 
+  askPermission: () => {
+    
+  }
+
   render() {
     const { status, coords, direction } = this.state;
 
@@ -27,8 +31,17 @@ export default class Live extends Component {
 
     if (status === 'undetermined') {
       return (
-        <View>
-          <Text>undetermined</Text>
+        <View style={styles.center}>
+          <Foundation name="alert" size={50} />
+          <Text>
+            You need to enable location services for this app.
+          </Text>
+          <TouchableOpacity onPress={this.askPermission} style={styles.button}>
+            <Text style={styles.buttonText}>
+              Enable
+            </Text>
+          </TouchableOpacity>
+
         </View>
       )
     }
